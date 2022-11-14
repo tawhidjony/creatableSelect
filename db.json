@@ -1,0 +1,44 @@
+{
+  "category": [
+    {
+      "name": "Laptop",
+      "id": 1
+    },
+    {
+      "name": "Bike",
+      "id": 2
+    }
+  ],
+  "post": [
+    {
+      "body": "HP",
+      "category_id": 1,
+      "id": 1
+    },
+    {
+      "body": "HP",
+      "category_id": 2,
+      "id": 2
+    },
+    {
+      "body": "HP",
+      "category_id": 1,
+      "id": 3
+    },
+    {
+      "body": "one",
+      "category_id": 1,
+      "id": 4
+    },
+    {
+      "body": "Quis voluptas magni ",
+      "category_id": 2,
+      "id": 5
+    },
+    {
+      "body": "HP",
+      "category_id": 2,
+      "id": 6
+    }
+  ]
+}
