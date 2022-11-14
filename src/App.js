@@ -1,13 +1,13 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Controller, useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import CreatableSelect from 'react-select/creatable';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [options, setOptions] = useState([]);
   const [value, setValue] = useState(null);
-  const { register, handleSubmit, control, reset } = useForm()
+  const { register, handleSubmit, reset } = useForm()
   console.log(value);
   const handleCreate = (inputValue) => {
     setIsLoading(true);
@@ -27,7 +27,7 @@ const App = () => {
 
   const handleSubmitForm = (data) => {
     const storeData = { ...data, category_id: value?.value }
-    axios.post("http://localhost:3004/post", storeData).then((res) => { 
+    axios.post("http://localhost:3004/post", storeData).then((res) => {
       reset()
       setValue(null)
     }).catch((error) => console.log(error))
@@ -65,10 +65,10 @@ const App = () => {
 
         </div>
         <div>
-          <input {...register("body")} placeholder='body' />
+          <input className='form-control' {...register("body")} placeholder='body' />
         </div>
         <div>
-          <button type='submit'>submit</button>
+          <button className='btn-primary' type='submit'>submit</button>
         </div>
       </form>
     </div>
